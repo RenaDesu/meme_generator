@@ -84,4 +84,25 @@
 
         text-decoration: none;
     }
+
+    &__close {
+        position: absolute;
+        right: rem(20px);
+
+        padding: 0;
+
+        width: rem(34px);
+        height: rem(34px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+        border: none;
+
+        &-text {
+            @include visually-hidden;
+        }
+    }
 }

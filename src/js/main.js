@@ -15,5 +15,4 @@ import '../index.html';
 import '../assets/scss/style.scss';
 
 import './modules/create-meme';
-import './modules/download-meme';
 import './modules/modal';

@@ -1,19 +1,17 @@
 import {
     uploadImage
 } from './modal';
-// import {
-//     downloadMeme
-// } from './download-meme';
 
 const memeText = document.querySelector('[data-text]');
 const memePosTop = document.querySelector('[data-position-top]');
 const memePosBottom = document.querySelector('[data-position-bottom]');
 const memeTextSize = document.querySelector('[data-size]');
 const memeTextColor = document.querySelector('[data-color]');
-export const canvas = document.querySelector('#meme');
+const canvas = document.querySelector('#meme');
+const downloadBtn = document.querySelector('[data-download]');
 
 let image;
-
+let url;
 let isTop = true;
 
 uploadImage.addEventListener('change', createImageForCanvas);
@@ -49,6 +47,12 @@ memePosBottom.addEventListener('click', () => {
     updateCanvas(canvas, image, memeText.value, memeTextSize.value, memeTextColor.value);
 });
 
+downloadBtn.addEventListener('click', (e) => {
+    updateCanvas(canvas, image, memeText.value, memeTextSize.value, memeTextColor.value);
+    downloadBtn.download = 'download.PNG';
+    downloadBtn.href = `${url}`;
+});
+
 function updateCanvas(canvas, image, text, size, color) {
     const ctx = canvas.getContext('2d');
     const width = image.width;
@@ -74,6 +78,8 @@ function updateCanvas(canvas, image, text, size, color) {
         ctx.textBaseline = 'bottom';
         ctx.fillText(text, width / 2, height - yOffset);
     }
+
+    url = canvas.toDataURL();
 }
 
 function createImageForCanvas() {

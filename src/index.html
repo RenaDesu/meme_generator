@@ -26,7 +26,8 @@
         </p>
         <form class="content__form" data-form action="#">
           <div class="content__form-upload">
-            <input class="content__form-input" data-upload type="file" accept="image/*" id="upload-file" name="upload-file">
+            <input class="content__form-input" data-upload type="file" accept="image/*" id="upload-file"
+              name="upload-file">
             <label class="content__form-label button" for="upload-file">Загрузить изображение</label>
           </div>
 
@@ -46,7 +47,8 @@
               <div class="modal__styles-wrapper">
                 <div class="modal__styles">
                   <label for="fontSize">Выбери размер шрифта</label>
-                  <input class="modal__size-input" data-size type="number" name="fontSize" id="fontSize" value="34" min="14" max="68">
+                  <input class="modal__size-input" data-size type="number" name="fontSize" id="fontSize" value="34"
+                    min="14" max="68">
                 </div>
                 <div class="modal__styles">
                   <label for="fontColor">Выбери цвет шрифта</label>
@@ -57,6 +59,17 @@
               <canvas class="modal__canvas" id="meme"></canvas>
 
               <a class="modal__download button" data-download href="#">Скачать мем</a>
+
+              <button class="modal__close" data-close type="button">
+                <span class="modal__close-text">Закрыть</span>
+                <svg class="modal__close-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.292969 11.6066L11.6067 0.292859L12.3138 0.999966L1.00008 12.3137L0.292969 11.6066Z"
+                    fill="#ad43eb" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1 0.292847L12.3137 11.6066L11.6066 12.3137L0.292893 0.999953L1 0.292847Z" fill="#ad43eb" />
+                </svg>
+              </button>
             </div>
           </div>
         </form>
