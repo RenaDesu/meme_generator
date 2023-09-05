@@ -1,0 +1,1 @@
+import"../index.html";import"../assets/scss/style.scss";import"./modules/create-meme";import"./modules/modal";
